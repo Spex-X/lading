@@ -1,3 +1,6 @@
+import Image from "next/image";
+import HeroSlider from "./components/HeroSlider";
+
 export default function Home() {
   return (
     <div className="min-h-screen flex flex-col">
@@ -57,6 +60,9 @@ export default function Home() {
             </div>
           </div>
           <div className="rounded-2xl border border-black/10 dark:border-white/10 p-6 md:p-8 bg-background/70">
+            <div className="-mt-2 -mx-2 mb-6">
+              <HeroSlider />
+            </div>
             <div className="grid grid-cols-2 gap-5 text-center">
               <div>
                 <div className="text-3xl font-extrabold">+70</div>
@@ -162,11 +168,32 @@ export default function Home() {
         <h2 className="text-2xl md:text-3xl font-bold">Quem comprou, aprovou</h2>
         <div className="mt-6 grid md:grid-cols-3 gap-6">
           {[
-            { nome: "Carla M.", texto: "Finalmente acertei o ponto SEM perder ingredientes. Meus clientes notaram a diferença!", estrelas: 5 },
-            { nome: "Bruno A.", texto: "A precificação salvou meu lucro. Paguei o e-book no primeiro fim de semana.", estrelas: 5 },
-            { nome: "Luana S.", texto: "O Morango do Amor ficou perfeito! Vendi tudo no mesmo dia.", estrelas: 5 },
+            {
+              nome: "Carla M.",
+              texto:
+                "Cremosidade no ponto e brilho impecável. As fotos não fazem jus — pessoalmente ficam ainda mais lindos!",
+              estrelas: 5,
+              imagem: "/Imagem 1.png",
+            },
+            {
+              nome: "Bruno A.",
+              texto:
+                "Padronizei o tamanho e a apresentação. O visual ficou profissional e as vendas subiram já na primeira semana.",
+              estrelas: 5,
+              imagem: "/Imagem 2.png",
+            },
+            {
+              nome: "Luana S.",
+              texto:
+                "Casquinha fina e recheio aveludado. O acabamento chama atenção e o sabor fecha a venda!",
+              estrelas: 5,
+              imagem: "/Imagem 3.png",
+            },
           ].map((d) => (
             <div key={d.nome} className="rounded-xl border border-black/10 dark:border-white/10 p-5 bg-background/60">
+              <div className="mb-3 overflow-hidden rounded-lg border border-black/10 dark:border-white/10 bg-black/5 dark:bg-white/5">
+                <Image src={d.imagem} alt={`Print real de cliente — ${d.nome}`} width={640} height={360} className="w-full h-auto object-cover" />
+              </div>
               <div className="flex items-center gap-3">
                 <div className="h-8 w-8 rounded-full bg-rose-100 dark:bg-rose-900/30 flex items-center justify-center text-rose-700 dark:text-rose-300 text-xs font-bold">
                   {d.nome.split(' ')[0][0]}
@@ -187,15 +214,21 @@ export default function Home() {
         <p className="mt-2 text-sm opacity-80">Tradicionais, Frutas Vermelhas, Licor 43, Camafeu, Cheesecake, Morango do Amor e muito mais!</p>
         
         <div className="mt-6 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 text-xs">
-          {[
-            "Tradicional",
-            "Frutas Vermelhas",
-            "Licor 43",
-            "Camafeu",
-            "Cheesecake",
-            "Morango do Amor",
-          ].map((s) => (
+          {["Gourmet Belga", "Frutas Vermelhas", "Clássico"].map((s) => (
             <span key={s} className="rounded-full border border-black/10 dark:border-white/10 px-3 py-2 text-center">{s}</span>
+          ))}
+        </div>
+
+        <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          {[
+            { src: "/Imagem 8.jpg", legenda: "Brigadeiro gourmet — cobertura belga e acabamento brilhante" },
+            { src: "/Imagem 10.jpg", legenda: "Frutas vermelhas — contraste de cores e sabor equilibrado" },
+            { src: "/Imagem 11.jpg", legenda: "Clássico com releitura — textura aveludada e formato padronizado" },
+          ].map((f) => (
+            <figure key={f.src} className="overflow-hidden rounded-xl border border-black/10 dark:border-white/10 bg-background/60">
+              <Image src={f.src} alt={f.legenda} width={1200} height={800} className="w-full h-auto object-cover" />
+              <figcaption className="px-3 py-2 text-xs opacity-80">{f.legenda}</figcaption>
+            </figure>
           ))}
         </div>
       </section>
@@ -204,18 +237,44 @@ export default function Home() {
       <section className="max-w-6xl mx-auto px-6 py-12">
         <div className="rounded-xl border border-black/10 dark:border-white/10 p-6 bg-background/60">
           <p className="text-sm md:text-base">
-            Os brigadeiros diferentes fazem tanto sucesso, que um deles foi parar até na Globo!
-            Essa receita chamou a atenção da <strong>Ana Maria Braga</strong> e ela reproduziu ao vivo em seu programa.
+            Um dos nossos brigadeiros ganhou destaque na TV: a <strong>Ana Maria Braga</strong>
+            conheceu a receita e preparou ao vivo no programa. Foi assim que muita gente
+            descobriu o nosso trabalho e passou a pedir exatamente esse sabor.
           </p>
         </div>
       </section>
 
       {/* Garantia */}
       <section id="garantia" className="max-w-6xl mx-auto px-6 py-16 md:py-20">
-        <h2 className="text-2xl md:text-3xl font-bold">Garantia incondicional de 7 dias</h2>
-        <p className="mt-3 text-sm md:text-base opacity-80">
-          Compre com tranquilidade. Se o conteúdo não for para você, solicite o reembolso em até 7 dias, conforme previsto em lei.
-        </p>
+        <div className="grid md:grid-cols-2 gap-8 items-center">
+          <div className="flex justify-center">
+            <Image
+              src="/Imagem 17.png"
+              alt="Selo de garantia de 7 dias"
+              width={420}
+              height={420}
+              className="h-auto w-[220px] sm:w-[280px] md:w-[340px]"
+              priority
+            />
+          </div>
+          <div>
+            <h2 className="text-2xl md:text-3xl font-extrabold text-rose-600 dark:text-rose-400">
+              Eu assumo o risco! Você não tem nada a perder!
+            </h2>
+            <p className="mt-3 text-sm md:text-base opacity-80">
+              Se você comprar o e-book e, por qualquer razão, não gostar, basta pedir o reembolso em até <strong>7 dias</strong> após a compra e devolvemos <strong>100%</strong> do seu dinheiro.
+              Sem burocracia.
+            </p>
+            <div className="mt-5 flex flex-wrap items-center gap-4 text-sm md:text-base">
+              <span className="inline-flex items-center gap-2 rounded-full border border-black/10 dark:border-white/10 px-3 py-1.5">
+                <span className="text-rose-600">🔒</span> Ambiente seguro
+              </span>
+              <span className="inline-flex items-center gap-2 rounded-full border border-black/10 dark:border-white/10 px-3 py-1.5">
+                <span className="text-rose-600">✅</span> 7 dias de garantia
+              </span>
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* CTA */}
@@ -256,6 +315,7 @@ export default function Home() {
           <a href="#comprar" className="block px-5 py-3">Comprar agora — acesso imediato</a>
         </div>
       </div>
+
     </div>
   );
 }
