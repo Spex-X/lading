@@ -169,27 +169,11 @@ export default function Home() {
         <h2 className="text-2xl md:text-3xl font-bold">Quem comprou, aprovou</h2>
         <div className="mt-6 grid md:grid-cols-3 gap-6">
           {[
-            {
-              nome: "Carla M.",
-              texto:
-                "Cremosidade no ponto e brilho impecável. As fotos não fazem jus — pessoalmente ficam ainda mais lindos!",
-              estrelas: 5,
-              imagem: "/Imagem 1.png",
-            },
-            {
-              nome: "Bruno A.",
-              texto:
-                "Padronizei o tamanho e a apresentação. O visual ficou profissional e as vendas subiram já na primeira semana.",
-              estrelas: 5,
-              imagem: "/Imagem 2.png",
-            },
-            {
-              nome: "Luana S.",
-              texto:
-                "Casquinha fina e recheio aveludado. O acabamento chama atenção e o sabor fecha a venda!",
-              estrelas: 5,
-              imagem: "/Imagem 3.png",
-            },
+            { nome: "Depoimento 1", texto: "Print real de aluna", estrelas: 5, imagem: "/Depoimento 2.webp" },
+            { nome: "Depoimento 2", texto: "Print real de aluna", estrelas: 5, imagem: "/Depoimento 3.webp" },
+            { nome: "Depoimento 3", texto: "Print real de aluna", estrelas: 5, imagem: "/Depoimento 4.png" },
+            { nome: "Depoimento 4", texto: "Print real de aluna", estrelas: 5, imagem: "/Depoimento 5.png" },
+            { nome: "Depoimento 5", texto: "Print real de aluna", estrelas: 5, imagem: "/Depoimento 6.png" },
           ].map((d) => (
             <div key={d.nome} className="rounded-xl border border-black/10 dark:border-white/10 p-5 bg-background/60">
               <div className="mb-3 overflow-hidden rounded-lg border border-black/10 dark:border-white/10 bg-black/5 dark:bg-white/5">
@@ -206,7 +190,6 @@ export default function Home() {
             </div>
           ))}
         </div>
-        {/* Dica: substitua por prints reais de WhatsApp/Instagram quando tiver */}
       </section>
 
       {/* Sabores */}
