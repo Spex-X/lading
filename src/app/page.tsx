@@ -14,7 +14,7 @@ export default function Home() {
             <a href="#sabores" className="hover:opacity-80">Sabores</a>
             <a href="#garantia" className="hover:opacity-80">Garantia</a>
           </nav>
-          <a href="#comprar" className="rounded-full bg-foreground text-background px-4 py-2 text-sm font-medium hover:opacity-90">Comprar</a>
+          <a href="https://pay.cakto.com.br/z3kbyps_531714" className="rounded-full bg-foreground text-background px-4 py-2 text-sm font-medium hover:opacity-90">Comprar</a>
         </div>
       </header>
 
@@ -46,7 +46,7 @@ export default function Home() {
               ))}
             </ul>
             <div className="mt-8 flex flex-col sm:flex-row gap-3">
-              <a href="#comprar" className="rounded-xl bg-red-600 hover:bg-red-700 text-white px-6 py-4 text-sm md:text-base font-extrabold shadow-md shadow-red-600/30">
+              <a href="https://pay.cakto.com.br/z3kbyps_531714" className="rounded-xl bg-red-600 hover:bg-red-700 text-white px-6 py-4 text-sm md:text-base font-extrabold shadow-md shadow-red-600/30">
                 Quero aprender agora!
               </a>
               <a href="#conteudo" className="rounded-lg border border-black/10 dark:border-white/20 px-5 py-3 text-sm font-medium hover:bg-black/5 dark:hover:bg-white/5">
@@ -135,7 +135,7 @@ export default function Home() {
               <div className="mt-1 text-sm opacity-70">Por</div>
               <div className="text-4xl md:text-5xl font-extrabold text-red-600">R$ 47,00</div>
               <div className="mt-2 text-xs opacity-70">ou 6x no cartão (defina conforme sua plataforma)</div>
-              <a href="#" className="mt-6 block text-center rounded-xl bg-red-600 hover:bg-red-700 text-white px-6 py-3 text-sm md:text-base font-extrabold">Garantir meu e-book</a>
+              <a href="https://pay.cakto.com.br/z3kbyps_531714" className="mt-6 block text-center rounded-xl bg-red-600 hover:bg-red-700 text-white px-6 py-3 text-sm md:text-base font-extrabold">Garantir meu e-book</a>
               <div className="mt-4 flex items-center justify-center gap-3 text-xs opacity-80">
                 <span className="inline-flex items-center gap-2"><span className="h-2 w-2 rounded-full bg-yellow-400"/>Garantia 7 dias</span>
                 <span className="inline-flex items-center gap-2"><span className="h-2 w-2 rounded-full bg-green-500"/>Pagamento seguro</span>
@@ -286,7 +286,7 @@ export default function Home() {
           </p>
           <div className="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
             <a
-              href="#"
+              href="https://pay.cakto.com.br/z3kbyps_531714"
               className="inline-block rounded-xl bg-red-600 hover:bg-red-700 text-white px-8 py-4 text-sm md:text-base font-extrabold shadow-md shadow-red-600/30"
             >
               Garantir meu e-book agora
@@ -312,7 +312,7 @@ export default function Home() {
       {/* Sticky mobile CTA */}
       <div className="fixed inset-x-0 bottom-0 z-30 sm:hidden">
         <div className="mx-3 mb-3 rounded-full bg-rose-600 text-white text-center text-sm font-semibold shadow-lg">
-          <a href="#comprar" className="block px-5 py-3">Comprar agora — acesso imediato</a>
+          <a href="https://pay.cakto.com.br/z3kbyps_531714" className="block px-5 py-3">Comprar agora — acesso imediato</a>
         </div>
       </div>
 
