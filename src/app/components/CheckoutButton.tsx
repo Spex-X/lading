@@ -2,6 +2,12 @@
 
 import { AnchorHTMLAttributes, PropsWithChildren, useMemo, type MouseEventHandler } from "react";
 
+declare global {
+  interface Window {
+    fbq?: (...args: any[]) => void;
+  }
+}
+
 type Props = PropsWithChildren<
   Omit<AnchorHTMLAttributes<HTMLAnchorElement>, "href"> & {
     hrefBase: string;
@@ -20,9 +26,7 @@ export default function CheckoutButton({ hrefBase, children, onClick, ...rest }:
   const handleClick: MouseEventHandler<HTMLAnchorElement> = (e) => {
     try {
       // Track Meta Pixel InitiateCheckout if available
-      // @ts-ignore
       if (typeof window !== "undefined" && typeof window.fbq === "function") {
-        // @ts-ignore
         window.fbq("track", "InitiateCheckout");
       }
     } catch {}

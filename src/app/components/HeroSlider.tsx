@@ -29,7 +29,7 @@ export default function HeroSlider() {
   // autoplay
   useEffect(() => {
     if (hoverRef.current) return;
-    timer.current && clearInterval(timer.current);
+    if (timer.current) clearInterval(timer.current);
     timer.current = setInterval(() => {
       setIndex((i) => (i + 1) % max);
     }, 4500);
