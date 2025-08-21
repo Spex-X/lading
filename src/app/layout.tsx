@@ -16,6 +16,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "E-book Brigadeiros Perfeitos — Não erre o ponto nunca mais!",
   description: "Mais de 70 receitas de brigadeiros, precificação e a melhor receita do Morango do Amor. Garanta já o seu e-book com garantia de 7 dias.",
+  icons: {
+    icon: "/brigadeiro.png",
+  },
 };
 
 export default function RootLayout({
