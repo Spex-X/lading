@@ -5,20 +5,6 @@ import CheckoutButton from "./components/CheckoutButton";
 export default function Home() {
   return (
     <div className="min-h-screen flex flex-col">
-      {/* Header */}
-      <header className="sticky top-0 z-20 border-b border-black/10 dark:border-white/10 bg-background/80 backdrop-blur">
-        <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-          <a href="#inicio" className="text-lg font-bold">Brigadeiros Perfeitos</a>
-          <nav className="hidden sm:flex items-center gap-6 text-sm">
-            <a href="#conteudo" className="hover:opacity-80">Conteúdo</a>
-            <a href="#para-quem" className="hover:opacity-80">Para quem</a>
-            <a href="#sabores" className="hover:opacity-80">Sabores</a>
-            <a href="#garantia" className="hover:opacity-80">Garantia</a>
-          </nav>
-          <CheckoutButton hrefBase="https://pay.cakto.com.br/z3kbyps_531714" className="rounded-full bg-foreground text-background px-4 py-2 text-sm font-medium hover:opacity-90">Comprar</CheckoutButton>
-        </div>
-      </header>
-
       {/* Hero */}
       <section id="inicio" className="relative overflow-hidden">
         <div className="absolute inset-0 -z-10 opacity-10 bg-gradient-to-br from-pink-500 via-red-500 to-yellow-500" />
